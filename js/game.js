@@ -6,24 +6,46 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "The soccer game is about to start do you",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Play",
+                    nextLevel: "play",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "sit on the bench",
+                    nextLevel: "bench",
                 },
             ]
         },
 
-        cave: {
+        play: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "what position do you want to play?",
+            choices: [
+                {
+                    text: "Goalie",
+                    nextLevel: "goalie",
+                },
+                 {
+                    text: "Forward",
+                    nextLevel: "forward",
+                },
+                 {
+                    text: "Middle",
+                    nextLevel: "middle",
+                },
+                 {
+                    text: "Defence",
+                    nextLevel: "defence",
+                }
+            ]
+        },
+
+        bench: {
+            message: "You watched your team lose",
             choices: [
                 {
                     text: "Start over",
@@ -31,16 +53,6 @@ var game = {
                 },
             ]
         },
-
-        field: {
-            message: "Some adventurer you are...",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
-        },
-
+     
     }
 };
